@@ -9,6 +9,10 @@ LEGAL_PAGES = [
     Path("AppStore/privacy_zh-CN.html"),
     Path("AppStore/terms_en.html"),
     Path("AppStore/terms_zh-CN.html"),
+    Path("AppStore/THBluetoothBatteryMonitoring/privacy_en.html"),
+    Path("AppStore/THBluetoothBatteryMonitoring/privacy_zh-CN.html"),
+    Path("AppStore/THBluetoothBatteryMonitoring/terms_en.html"),
+    Path("AppStore/THBluetoothBatteryMonitoring/terms_zh-CN.html"),
 ]
 
 
@@ -38,7 +42,8 @@ def check_legal_pages():
             fail(f"{path}: contains Cocoa HTML Writer markup")
         if "file:///" in lower:
             fail(f"{path}: contains local file:// links")
-        if 'href="styles/legal.css"' not in text:
+        stylesheet_href = "styles/legal.css" if path.parent == Path("AppStore") else "../styles/legal.css"
+        if f'href="{stylesheet_href}"' not in text:
             fail(f"{path}: missing shared legal stylesheet")
         if '<div class="container">' not in text:
             fail(f"{path}: missing styled container")
@@ -62,7 +67,7 @@ def check_legal_pages():
         if missing:
             fail(f"{path}: missing local link targets: {missing}")
 
-        stylesheet = path.parent / "styles/legal.css"
+        stylesheet = path.parent / stylesheet_href
         if not stylesheet.is_file():
             fail(f"{path}: missing stylesheet target: {stylesheet}")
 

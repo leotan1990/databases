@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蓝牙电量监控 隐私政策</title>
+    <link rel="stylesheet" href="../styles/legal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch"><a href="privacy_en.html">English</a></div>
+        <h1>隐私政策</h1>
+        <p class="subtitle">蓝牙电量监控</p>
+        <p class="last-updated">最后更新：2026 年 7 月 7 日</p>
+
+        <h2>1. 概述</h2>
+        <p>蓝牙电量监控（以下简称“本应用”）用于监控蓝牙外设电量、连接状态、本地电量历史、小组件和电量相关通知。</p>
+        <div class="highlight">
+            <p><strong>核心承诺：</strong>本应用不使用广告 SDK、第三方统计 SDK 或开发者自建追踪服务器。蓝牙与电量数据仅用于提供应用功能，并保存在您的设备本地；在 iCloud 可用时，可能通过苹果管理的 iCloud 存储进行同步。</p>
+        </div>
+
+        <h2>2. 我们处理的信息</h2>
+        <p>为提供核心功能，本应用可能处理并保存以下信息：</p>
+        <ul>
+            <li>iOS Core Bluetooth 暴露的蓝牙外设标识符、设备名称、自定义名称和设备类型选择；</li>
+            <li>电量百分比、充电状态、多组件电量、连接状态、读取状态和最后发现时间；</li>
+            <li>用于图表、统计、预测和通知判断的电量历史记录；</li>
+            <li>通知设置、勿扰时段、低电量阈值、刷新策略、数据保留偏好和主题偏好；</li>
+            <li>小组件展示数据，包括设备状态和预测电量时间线；</li>
+            <li>Lifetime Pro 的 StoreKit 购买权益状态。</li>
+        </ul>
+
+        <h2>3. 我们不收集的信息</h2>
+        <p>本应用不会主动收集或传输：</p>
+        <ul>
+            <li>姓名、邮箱、手机号、通讯录、日历或精确位置；</li>
+            <li>广告标识符或跨应用追踪标识符；</li>
+            <li>浏览记录、麦克风数据、相机数据、照片或文件；</li>
+            <li>第三方统计事件、广告画像或行为追踪数据。</li>
+        </ul>
+
+        <h2>4. 蓝牙与设备数据</h2>
+        <p>本应用使用 iOS Core Bluetooth 扫描附近的低功耗蓝牙外设，连接您选择的设备，读取受支持的标准电池服务或受支持的厂商电量特征，并更新已保存设备状态。</p>
+        <p>在 iOS 允许的情况下，本应用可能在后台使用蓝牙以刷新电量状态并发送电量提醒。本应用不会使用蓝牙数据推断您的位置，也不会为了广告目的出售或共享蓝牙标识符。</p>
+
+        <h2>5. 本地存储、小组件与 iCloud</h2>
+        <p>本应用使用 Core Data 保存设备记录和电量读数。应用设置保存在 iOS UserDefaults 中。小组件数据可能写入 App Group 共享容器，以便 iOS 小组件展示设备状态和预测电量时间线。</p>
+        <p>本应用配置了基于 Apple CloudKit 的 Core Data 同步。如果您的 Apple ID 可使用 iCloud 且系统启用该功能，设备和电量记录可能通过苹果的 iCloud 基础设施同步。开发者不运营独立同步服务器，也无法直接访问您的 iCloud 账户数据。</p>
+
+        <h2>6. 通知</h2>
+        <p>如果您授予通知权限，本应用可能为低电量、预计快速耗电、充电完成、连接和断开事件安排本地通知。通知偏好和最近提醒时间会保存在本地，用于遵守您的设置并避免重复提醒。</p>
+
+        <h2>7. 购买</h2>
+        <p>本应用可能通过 Apple StoreKit 提供 Lifetime Pro 购买。购买、恢复购买和权益验证由 Apple StoreKit 处理。本应用仅保存用于解锁功能的本地权益状态。支付信息由 Apple 处理，开发者不处理您的付款信息。</p>
+
+        <h2>8. 数据保留与删除</h2>
+        <p>电量历史的保留时间取决于您在应用中选择的数据保留选项，例如 7 天、30 天、90 天、1 年或永久保留。您可以删除已保存设备、通过应用内可用操作清理本地数据、在系统设置中关闭 iCloud 同步、撤销蓝牙或通知权限，或卸载本应用以删除沙盒内本地数据。</p>
+
+        <h2>9. 第三方服务</h2>
+        <p>本应用依赖 Apple 系统框架和服务，包括 Core Bluetooth、Core Data、CloudKit、WidgetKit、UserNotifications 和 StoreKit。这些服务受 Apple 的隐私实践以及您的 Apple ID/iCloud 设置约束。本应用不集成第三方广告、统计或崩溃上报 SDK。</p>
+
+        <h2>10. 儿童隐私</h2>
+        <p>本应用面向一般工具用途，不会明知收集儿童个人信息。由于本应用不提供开发者运营的账户或服务器，监护人可以通过删除已保存设备或卸载应用来移除本地应用数据。</p>
+
+        <h2>11. 政策变更</h2>
+        <p>当应用功能、平台要求或法律要求发生变化时，我们可能更新本隐私政策。更新版本可能发布在本页面、App 更新说明或应用内。</p>
+
+        <div class="contact">
+            <h2>12. 联系我们</h2>
+            <p>如果您对本隐私政策有任何疑问，请通过以下方式联系：</p>
+            <ul>
+                <li><strong>邮箱：</strong><a href="mailto:vivi.huang.2026@foxmail.com">vivi.huang.2026@foxmail.com</a></li>
+                <li><strong>GitHub Issues：</strong><a href="https://github.com/leotan1990/databases/issues" target="_blank">https://github.com/leotan1990/databases/issues</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
