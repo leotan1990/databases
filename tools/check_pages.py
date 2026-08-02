@@ -13,6 +13,10 @@ LEGAL_PAGES = [
     Path("AppStore/THBluetoothBatteryMonitoring/privacy_zh-CN.html"),
     Path("AppStore/THBluetoothBatteryMonitoring/terms_en.html"),
     Path("AppStore/THBluetoothBatteryMonitoring/terms_zh-CN.html"),
+    Path("AppStore/THVideoCompression/privacy_en.html"),
+    Path("AppStore/THVideoCompression/privacy_zh-CN.html"),
+    Path("AppStore/THVideoCompression/terms_en.html"),
+    Path("AppStore/THVideoCompression/terms_zh-CN.html"),
 ]
 
 
