@@ -5,6 +5,7 @@ import sys
 
 
 LEGAL_PAGES = [
+    *sorted(Path("AppStore/THPhotoCleanup").glob("*.html")),
     Path("AppStore/privacy_en.html"),
     Path("AppStore/privacy_zh-CN.html"),
     Path("AppStore/terms_en.html"),
@@ -47,6 +48,8 @@ def check_legal_pages():
         if "file:///" in lower:
             fail(f"{path}: contains local file:// links")
         stylesheet_href = "styles/legal.css" if path.parent == Path("AppStore") else "../styles/legal.css"
+        if path.parent == Path("AppStore/THPhotoCleanup"):
+            stylesheet_href = "legal.css"
         if f'href="{stylesheet_href}"' not in text:
             fail(f"{path}: missing shared legal stylesheet")
         if '<div class="container">' not in text:
