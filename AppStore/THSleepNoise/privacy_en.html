@@ -11,52 +11,64 @@
         <div class="lang-switch"><a href="privacy_zh-CN.html">中文版</a></div>
         <h1>Privacy Policy</h1>
         <p class="subtitle">Aura Sleep (Aura Sleep: White Noise &amp; Rain)</p>
-        <p class="last-updated">Last Updated: September 17, 2026</p>
+        <p class="last-updated">Last Updated: October 28, 2026</p>
 
         <h2>1. Overview &amp; Core Commitment</h2>
-        <p>Welcome to <strong>Aura Sleep</strong> ("the App"). The App is developed and operated by an independent developer dedicated to providing a tranquil, ad-free acoustic experience with high-fidelity nature soundscapes, scientific white noise, and binaural brainwave sound therapy.</p>
+        <p>Welcome to <strong>Aura Sleep</strong> ("the App"). The App is developed and operated by an independent developer and provides ambient sound mixing and sound-creation tools.</p>
         <div class="highlight">
-            <p><strong>Our Core Privacy Promise:</strong> We respect your silence and your peace of mind. The App <strong>does NOT contain third-party advertising SDKs</strong>, <strong>does NOT integrate behavioral tracking or analytical telemetry SDKs</strong>, <strong>does NOT operate remote user database servers</strong>, and <strong>NEVER collects, stores, or sells your personal identity information</strong>. All sound configurations and recorded audios remain strictly on your local device.</p>
+            <p><strong>Our Core Privacy Promise:</strong> The App does not contain third-party advertising SDKs or behavioral tracking and analytics SDKs, and we do not sell your personal data. Your audio and mix settings are processed and stored locally by the App, subject to the sharing and system-backup choices described below. If you choose to send feedback, the feedback data described in Section 2 is sent to the developer through Apple CloudKit.</p>
         </div>
 
         <h2>2. System Permissions &amp; Data Processing</h2>
-        <p>To provide sleep sound mixing and personal soundscape creation, the App may request the following system permission:</p>
+        <p>The App processes audio on your device and requests microphone permission only for recording. Sending feedback is a separate, voluntary action.</p>
         <ul>
-            <li><strong>Microphone Access (Optional):</strong> The App offers a custom ambient sound recording feature. Only when you explicitly initiate a recording to capture ambient soothing sounds around you (such as rain on the windowsill, wind chimes, or gentle nature audio) as your custom sound track, the App requests microphone permission. The recorded audio files are processed locally and stored exclusively within the App's secure sandboxed storage on your device. Audio recordings are never uploaded, analyzed, or shared over any network. Denying microphone access will simply disable the custom recording feature, while all 36+ built-in official soundscapes and mixing features remain fully operational.</li>
-            <li><strong>Audio Playback &amp; Background Audio:</strong> The App uses Apple's native AVFoundation framework to provide smooth background audio playback while your screen is off or while switching between apps. No personal information is gathered during audio sessions.</li>
+            <li><strong>Microphone Access (Optional):</strong> When you start a recording, the App requests microphone permission. Recorded audio is processed and saved in the App's local storage. Denying microphone access prevents recording but does not affect other playback and mixing features.</li>
+            <li><strong>Local Audio, Sharing &amp; Backups:</strong> Recordings, imported audio, generated sounds, mixes, and completed export files are processed and stored locally. The App does not automatically upload these audio files or your mix settings to the developer or the feedback database. If you choose to export or share a file, it is sent to the destination you select through the system sharing interface, and that destination's practices apply. Files and preferences may also be included in backups managed by iOS or your device/account settings; those backups are not controlled by the App.</li>
+            <li><strong>Audio Playback &amp; Background Audio:</strong> The App uses Apple's AVFoundation framework for playback, including background and lock-screen playback. It does not send your listening history, recordings, or mixes to the developer during playback.</li>
         </ul>
+        <h3>Voluntary In-App Feedback</h3>
+        <p>Only when you tap the feedback submission button does the App send the following to the developer through Apple CloudKit:</p>
+        <ul>
+            <li>The feedback text you enter;</li>
+            <li>An optional reply email address, if you enter one;</li>
+            <li>The App version and build number, iOS version, and current language/region setting, to provide technical context for your feedback.</li>
+        </ul>
+        <p>An iCloud account is required to submit feedback. CloudKit stores the feedback in the App's CloudKit container and automatically maintains record metadata, including creation information and an app-scoped creator user identifier. This identifier associates the record with the account that created it for CloudKit record ownership and permissions. It is not an advertising identifier. The App does not read your Apple ID email address, real name, or Apple ID credentials; the reply email sent with feedback is only the one you choose to type into the form.</p>
+        <p>The submitted information is used to handle and respond to your feedback and diagnose related technical issues. Your optional email is used only to reply to your feedback. Feedback records and their metadata are not used for advertising or cross-app tracking. CloudKit is hosted by Apple, and record access is governed by the container's CloudKit permissions. Submitted feedback is not an anonymous record because it can be associated with its CloudKit creator and any email you provide.</p>
 
         <h2>3. Local Storage &amp; System API Declarations</h2>
         <p>In accordance with Apple's Privacy Manifest guidelines, the App declares the following system API categories:</p>
         <ul>
-            <li><strong>User Defaults (UserDefaults - CA92.1):</strong> Used to persist your local mix configuration (active tracks, individual sound volumes), sleep timer preferences (countdown duration and fade-out settings), favorite preset lists, and theme preferences directly on your device. This data is purely local and never synced to external servers.</li>
-            <li><strong>File Timestamp (FileTimestamp - C617.1):</strong> Used within the local app container to organize, sort, and manage timestamps of your custom recordings and exported master-mix audio files.</li>
+            <li><strong>User Defaults (UserDefaults - CA92.1):</strong> Used to save local mix configuration, sleep timer preferences, favorites, and other App preferences. Favorite scene information may also be shared on the device with the App's widget through its App Group. The App does not upload these preferences to its feedback database; system-managed backups depend on your device/account settings.</li>
+            <li><strong>File Timestamp (FileTimestamp - C617.1):</strong> Used within the App container to organize and manage custom audio and completed export files.</li>
+            <li><strong>Elapsed-Time Timers (SystemBootTime - 35F9.1):</strong> Used locally to measure elapsed time for audio previews and playback transitions. The App does not send system boot time to the developer.</li>
         </ul>
 
         <h2>4. In-App Purchases &amp; Subscriptions</h2>
-        <p>The App provides optional "Aura Pro" premium memberships (including monthly auto-renewing subscriptions, yearly auto-renewing subscriptions with a 3-day free trial, and lifetime non-consumable access) through Apple's native StoreKit system:</p>
+        <p>The App provides optional "Aura Pro" access through Apple's StoreKit system, with monthly and yearly auto-renewing subscriptions and a lifetime one-time purchase. Current prices, billing periods, and any introductory offers available to your account are shown on the App Store purchase page. A free trial is available only when you are eligible and the purchase page shows an available trial offer.</p>
         <ul>
             <li>All financial transactions, billing processing, and subscription renewals are managed solely and securely by Apple Inc. via the App Store.</li>
             <li>The developer has no access to and never stores your credit card details, payment accounts, or Apple ID credentials.</li>
-            <li>The App verifies digitally signed App Store receipts locally on your device solely to unlock premium features (such as full sound catalogs, multi-track mixing, and high-fidelity 60-minute audio exports).</li>
+            <li>The App reads locally verified App Store transaction status on your device to determine Aura Pro access. Basic mixing does not require Aura Pro. Access to the full Pro sound library and creating new AAC audio exports require Aura Pro; sharing an already completed export does not require a currently active membership.</li>
         </ul>
 
-        <h2>5. Information We Do NOT Collect</h2>
-        <p>In adherence to strict data minimization principles, the App <strong>does NOT</strong> collect:</p>
+        <h2>5. Information We Do Not Request or Track</h2>
+        <p>Other than the voluntary feedback information described in Section 2, the App does not request or automatically extract the following for collection by the developer:</p>
         <ul>
-            <li>Personal identifiable information such as your name, phone number, email address, or government ID;</li>
-            <li>Contacts, address books, calendar appointments, or personal notes;</li>
+            <li>Your real name, phone number, government ID, or Apple ID credentials;</li>
+            <li>Your contacts, address book, calendar appointments, or personal notes;</li>
             <li>Precise GPS location data or location history;</li>
             <li>Advertising identifiers (IDFA) or cross-app tracking fingerprints;</li>
             <li>Biometric data (Face ID, Touch ID) or clinical health records.</li>
         </ul>
+        <p>The optional email and app-scoped CloudKit creator identifier used with feedback are described above. If you voluntarily include other personal details in your feedback text, those details are sent with the feedback. Please include only what is necessary for your support request.</p>
 
         <h2>6. Data Retention &amp; User Control</h2>
-        <p>You have absolute control over your local data:</p>
         <ul>
-            <li><strong>Deleting Custom Audio:</strong> You can delete any custom audio recordings directly within the App at any time.</li>
-            <li><strong>Managing Permissions:</strong> You can grant or revoke microphone permissions at any time via iOS <em>Settings &gt; Aura Sleep</em>.</li>
-            <li><strong>Complete Data Removal:</strong> Uninstalling the App from your device will prompt the iOS system to permanently and irreversibly erase all sandboxed preferences, custom mixes, and audio recordings.</li>
+            <li><strong>Local Audio and Exports:</strong> You can delete custom sounds and completed export files using the App's management pages. Files you have shared or saved outside the App are controlled separately by the destination you selected.</li>
+            <li><strong>Managing Permissions:</strong> You can grant or revoke microphone permission through iOS <em>Settings &gt; Aura Sleep</em>.</li>
+            <li><strong>Removing the App:</strong> Deleting the App removes its local sandbox data from the device under iOS rules. This does not automatically remove copies in system backups, files saved elsewhere, or feedback previously submitted to CloudKit.</li>
+            <li><strong>Feedback Data Requests:</strong> Feedback records remain in the App's CloudKit container unless handled or deleted there; uninstalling the App does not delete them. You can contact <a href="mailto:vivi.huang.2026@foxmail.com">vivi.huang.2026@foxmail.com</a> to request access to, correction of, or deletion of your submitted feedback. Please provide enough details to locate the submission, such as approximately when it was sent and the reply email you supplied, if any. The App does not implement a fixed automatic expiry period for feedback records.</li>
         </ul>
 
         <h2>7. Children's Privacy</h2>
